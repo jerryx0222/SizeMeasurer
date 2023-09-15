@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VMeasureClass</class>
+ <widget class="QWidget" name="VMeasureClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1750</width>
+    <height>730</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Class</string>
+  </property>
+  <widget class="QTableWidget" name="tbParameter">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>491</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>338</number>
+   </attribute>
+  </widget>
+  <widget class="QTableWidget" name="tbClass">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>100</y>
+     <width>1041</width>
+     <height>621</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnLoad">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>650</y>
+     <width>141</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSave">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>650</y>
+     <width>141</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSet">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>650</y>
+     <width>141</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Set</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tbX">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>10</y>
+     <width>1041</width>
+     <height>91</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tbY">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>100</y>
+     <width>191</width>
+     <height>621</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tbClassName">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>310</y>
+     <width>491</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>338</number>
+   </attribute>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

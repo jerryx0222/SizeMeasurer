@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgCalibration</class>
+ <widget class="QDialog" name="dlgCalibration">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>790</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1100</width>
+    <height>790</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>2000</width>
+    <height>1000</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Calibration</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Images.qrc">
+    <normaloff>:/Images/Images/icon2.png</normaloff>:/Images/Images/icon2.png</iconset>
+  </property>
+  <widget class="HHalconLabelCali" name="lblDisplay">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>199</y>
+     <width>821</width>
+     <height>581</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bntExit">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>740</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="lstImages">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>470</y>
+     <width>251</width>
+     <height>161</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnRemove">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>640</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Remove</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCalibration">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>690</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Calibration</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnGrab">
+   <property name="geometry">
+    <rect>
+     <x>980</x>
+     <y>170</y>
+     <width>111</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Grab</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSave">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>740</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>0</y>
+     <width>291</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Camera/Lens</string>
+   </property>
+   <widget class="QLineEdit" name="edtWidth">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>40</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>CellHeight(um):</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtFocus">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>120</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtHeight">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>80</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Focus(mm):</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>CellWidth(um):</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>611</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Cali. Board</string>
+   </property>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>80</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Mark Dis.(m):</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>120</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Diam. Ratio:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtDiamRatio">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>120</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtMarkDis">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>80</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtXCount">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>40</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtYCount">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>80</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Y Count:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>X Count:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtThick">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>120</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Thick(mm):</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtDescrFile">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>20</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DescrFile:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSetDesc">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>60</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSaveFile">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>110</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SaveFile</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLineEdit" name="edtParam">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>260</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>230</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CCD Param:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="edtPos">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>320</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>290</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CCD Pos:</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="chkLive">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>180</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Live</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAdd">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>640</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>360</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>X um/p:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="edtUnitX">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>360</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblXYAngle">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>160</y>
+     <width>441</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>X:--- Y:--- Z:---</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="edtCali">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>430</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>430</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>distortion(%):</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblRaotae">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>0</y>
+     <width>161</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Images.qrc">:/Images/Images/dof6.bmp</pixmap>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="chkXYZ">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CCD Pos:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnExport">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>690</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ReMoveAll</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="chkCaliInfo">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>160</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cali. Info:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnLoad">
+   <property name="geometry">
+    <rect>
+     <x>980</x>
+     <y>210</y>
+     <width>111</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="edtUnitY">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>390</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>390</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Y um/p:</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>HHalconLabelCali</class>
+   <extends>QLabel</extends>
+   <header location="global">hhalconlabelcali.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>bntExit</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgCalibration</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>925</x>
+     <y>660</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>518</x>
+     <y>350</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
